@@ -3,6 +3,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=django
 
 ### Django ###
+/*
 *.log
 *.pot
 *.pyc
@@ -184,9 +185,11 @@ logs
 **/*.backup.*
 **/*.back.*
 
-node_modules
+/node_modules
+!/*/node_modules
 bower_components
-*.tmdb_apikey
+*.tmdb_apikey/
+*.tmdb_apikey*
 
 *.sublime*
 
@@ -194,4 +197,6 @@ psd
 thumb
 sketch
 
+!/node_modules
+/node_modules/*
 # End of https://www.toptal.com/developers/gitignore/api/react

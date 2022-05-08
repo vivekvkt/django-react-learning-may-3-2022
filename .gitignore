@@ -204,4 +204,8 @@ sketch
 **.tmdb_apikey/*/**
 *.tmdb_apikey/*
 **/.tmdb_apikey/*
+.tmdb_apikey
+tmdb_apikey/
+.tmdb_apikey/
+
 # End of https://www.toptal.com/developers/gitignore/api/react

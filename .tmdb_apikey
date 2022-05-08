@@ -1,12 +1,1 @@
-API Key (v3 auth)
-b041aaa58135c0ca1a3ba67301c1f5ad
 
-
-API Read Access Token (v4 auth)
-eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMDQxYWFhNTgxMzVjMGNhMWEzYmE2NzMwMWMxZjVhZCIsInN1YiI6IjYyNzY4MTlhNzJkODU1MTMwOGQxZTc5OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UN8imPQC8Cux-wkJeP6yplkWuYIUzqwJuFooi6h25Ho
-
-Example API Request
-https://api.themoviedb.org/3/movie/550?api_key=b041aaa58135c0ca1a3ba67301c1f5ad
-
-firebase url-
-https://netflix-clone-d6b76-default-rtdb.firebaseio.com/

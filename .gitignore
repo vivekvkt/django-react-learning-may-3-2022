@@ -197,6 +197,15 @@ psd
 thumb
 sketch
 
-!/node_modules
+# dependencies
+/node_modules
+node_modules/*
 /node_modules/*
+**/node_modules
+**node_modules
+node_modules/
+*/node_modules/*
+
+**.tmdb_apikey
+*/.tmdb_apikey/*
 # End of https://www.toptal.com/developers/gitignore/api/react

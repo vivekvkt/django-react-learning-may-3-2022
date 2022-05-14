@@ -1,4 +1,7 @@
-**../../.vscode/*
+
 /.vscode/
 ./
-**.gitignore
+/.gitignore/
+**../../.gitignore/*
+../.gitignore
+*.gitignore

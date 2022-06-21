@@ -7,3 +7,5 @@
 *.gitignore
 firebase-debug.log
 .api_key
+somelink.txt
+celery_env/

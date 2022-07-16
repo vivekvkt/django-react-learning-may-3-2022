@@ -10,3 +10,4 @@ firebase-debug.log
 somelink.txt
 celery_env/
 venv_fastapi
+.env

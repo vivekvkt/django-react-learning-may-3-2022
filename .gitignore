@@ -11,6 +11,7 @@ somelink.txt
 celery_env/
 venv_fastapi
 .env
+venv/
 demo.txt
 
 

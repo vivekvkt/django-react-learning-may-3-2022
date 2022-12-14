@@ -13,6 +13,7 @@ venv_fastapi
 .env
 venv/
 demo.txt
+.Big-Data_Technologies/
 
 
 

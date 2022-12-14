@@ -73,3 +73,45 @@
 # obj = Pchild()
 # #print("hello",obj.age) # error
 
+#private varilable 
+# class StudentDetails:
+#     # __name = None
+#     # __roll_no = None
+    
+#     def __init__(self):
+#         self.__name = 'vivek',
+#         self.__roll_no = '12345'
+        
+#     def get(self):
+#         print("name--",self.__name)
+#         print("rollno",self.__roll_no)
+       
+       
+# obj = StudentDetails()
+# obj.get()
+# print(obj.name)
+# print(obj.roll_no)
+
+#protected varilable 
+# class StudentDetails:
+#     # __name = None
+#     # __roll_no = None
+    
+#     def __init__(self):
+#         self._name = 'vivek',
+#         self._roll_no = '12345'
+        
+#     def get(self):
+#         print("name--",self._name)
+#         print("rollno",self._roll_no)
+        
+# class St(StudentDetails):
+#     def __init__(self):
+#         super().__init__()
+        
+       
+       
+# obj = St()
+# obj.get()
+# print(obj.name)
+# print(obj.roll_no)

@@ -1,0 +1,61 @@
+version: "3"
+services:
+    krabbitmq:
+        hostname: krabbitmq
+        image: rabbitmq:latest
+        volumes:
+            - "./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf"
+        ports:
+            - "5672:5672"
+    worker:
+        image: karthikasasanka/shopping-celery:v1
+        environment:
+            - REDIS_HOST=kredis
+            - REDIS_PORT=6379
+            - REDIS_CELERY_DB_INDEX=10
+            - REDIS_STORE_DB_INDEX=0
+            - RABBITMQ_HOST=krabbitmq
+            - RABBITMQ_USERNAME=guest
+            - RABBITMQ_PASSWORD=guest
+            - RABBITMQ_PORT=5672
+        depends_on:
+            - krabbitmq
+            - kredis
+    kredis:
+        hostname: kredis
+        image: redis:latest
+        ports:
+            - "6379:6379"
+    api:
+        image: karthikasasanka/shopping-api:v1
+        environment:
+            - REDIS_HOST=kredis
+            - REDIS_PORT=6379
+            - REDIS_CELERY_DB_INDEX=10
+            - REDIS_STORE_DB_INDEX=0
+            - RABBITMQ_HOST=krabbitmq
+            - RABBITMQ_USERNAME=guest
+            - RABBITMQ_PASSWORD=guest
+            - RABBITMQ_PORT=5672
+        volumes:
+            - ./shopping:/usr/src/shopping/
+        depends_on:
+            - worker
+        ports:
+            - "5000:5000"
+    flower:
+        image: karthikasasanka/shopping-celery-flower:v1
+        environment:
+            - REDIS_HOST=kredis
+            - REDIS_PORT=6379
+            - REDIS_CELERY_DB_INDEX=10
+            - REDIS_STORE_DB_INDEX=0
+            - RABBITMQ_HOST=krabbitmq
+            - RABBITMQ_USERNAME=guest
+            - RABBITMQ_PASSWORD=guest
+            - RABBITMQ_PORT=5672
+        ports:
+            - 5555:5555
+        depends_on:
+            - krabbitmq
+            - kredis
